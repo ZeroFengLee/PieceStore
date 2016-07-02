@@ -1,0 +1,7 @@
+# Podfile
+use_frameworks!
+inhibit_all_warnings!
+
+target 'PieceStoreDemo' do
+  pod 'PieceStore', '~> 0.0.1'
+end

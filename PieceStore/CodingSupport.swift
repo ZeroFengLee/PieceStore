@@ -8,8 +8,8 @@
 
 import UIKit
 
-class CodingSupport: NSObject, NSCoding {
-    func encodeWithCoder(aCoder: NSCoder) {
+public class CodingSupport: NSObject, NSCoding {
+    public func encodeWithCoder(aCoder: NSCoder) {
         var count: UInt32 = 0
         let ivars = class_copyIvarList(self.classForCoder, &count)
         for i in 0..<Int(count) {
@@ -21,7 +21,7 @@ class CodingSupport: NSObject, NSCoding {
         free(ivars)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init()
         var count: UInt32 = 0
         let ivars = class_copyIvarList(self.classForCoder, &count)
@@ -33,7 +33,7 @@ class CodingSupport: NSObject, NSCoding {
         }
     }
     
-    override init() {
+    public override init() {
         super.init()
     }
 }
