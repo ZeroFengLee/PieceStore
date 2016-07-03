@@ -1,5 +1,5 @@
 //
-//  Teacher.swift
+//  Student.swift
 //  PieceStoreDemo
 //
 //  Created by Zero on 16/7/3.
@@ -9,9 +9,7 @@
 import Foundation
 import PieceStore
 
-class Teacher: CodingSupport {
-    var name: String = ""
-    var course: String = ""
-    var level: Int = 0
-    var age: Int = 38
+class UserInfo: CodingSupport {
+    var username: String = "default"    //用户名
+    var userSex: Bool = true    //性别
 }
