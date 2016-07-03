@@ -3,5 +3,5 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'PieceStoreDemo' do
-  pod 'PieceStore', '~> 0.0.1'
+  pod 'PieceStore', '~> 1.0.2'
 end

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Zero. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public class PieceStore: NSObject {
     
@@ -36,7 +36,7 @@ public class PieceStore: NSObject {
             let userInfo = NSKeyedUnarchiver.unarchiveObjectWithData(_infoData) as! T
             return userInfo
         }
-        return T()
+        return type.init()
     }
     
     public class func update(modelType: NSObject.Type, value:AnyObject, key: String) {

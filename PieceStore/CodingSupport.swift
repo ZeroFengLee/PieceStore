@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Zero. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public class CodingSupport: NSObject, NSCoding {
     public func encodeWithCoder(aCoder: NSCoder) {
@@ -31,6 +31,7 @@ public class CodingSupport: NSObject, NSCoding {
             let value = aDecoder.decodeObjectForKey(key)
             self.setValue(value, forKey: key)
         }
+        free(ivars)
     }
     
     public override init() {

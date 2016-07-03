@@ -13,6 +13,7 @@
 		1C7621411D28322E00FEA4EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7621401D28322E00FEA4EA /* Assets.xcassets */; };
 		1C7621441D28322E00FEA4EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C7621421D28322E00FEA4EA /* LaunchScreen.storyboard */; };
 		1C76214D1D28330200FEA4EA /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76214C1D28330200FEA4EA /* Student.swift */; };
+		1C76214F1D28396A00FEA4EA /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76214E1D28396A00FEA4EA /* Teacher.swift */; };
 		8248339216E99DBE943181F8 /* Pods_PieceStoreDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AD56FC714E0D694DEE0C4F /* Pods_PieceStoreDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		1C7621431D28322E00FEA4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C7621451D28322E00FEA4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C76214C1D28330200FEA4EA /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		1C76214E1D28396A00FEA4EA /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
 		911C69F0E4198EACC607F95A /* Pods-PieceStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PieceStoreDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PieceStoreDemo/Pods-PieceStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DCFDE0B6FEC68E6D1D17FEDF /* Pods-PieceStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PieceStoreDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PieceStoreDemo/Pods-PieceStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1C76214C1D28330200FEA4EA /* Student.swift */,
+				1C76214E1D28396A00FEA4EA /* Teacher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C76214F1D28396A00FEA4EA /* Teacher.swift in Sources */,
 				1C76213C1D28322E00FEA4EA /* ViewController.swift in Sources */,
 				1C76214D1D28330200FEA4EA /* Student.swift in Sources */,
 				1C76213A1D28322E00FEA4EA /* AppDelegate.swift in Sources */,
