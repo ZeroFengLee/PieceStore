@@ -22,7 +22,7 @@ PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用�
 ###Podfile
 在podfile中添加PieceStore依赖
 ```swift
-pod 'PieceStore', '~> 1.0.4'
+pod 'PieceStore', '~> 1.0.5'
 ```
 然后运行pod 更新
 ```swift
