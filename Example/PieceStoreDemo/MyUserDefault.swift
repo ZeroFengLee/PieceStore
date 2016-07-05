@@ -10,7 +10,7 @@ import Foundation
 import PieceStore
 
 func saveUserId(id: String) {
-    PieceStore.saveUserId(id)
+    PieceStore.handleContext(id)
 }
 
 //MARK: 更新用户信息

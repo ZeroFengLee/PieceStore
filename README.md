@@ -35,8 +35,10 @@ $ pod install
 
  假如项目有个需求，需要存储用户的信息，在没有网络的情况下也可以显示
  
- ##### 定一个UserInfo模型
- > 注意: 存储的Model类一定要继承`CodingSupport`。
+##### 定一个UserInfo模型
+
+ > 注意: 存储的Model类一定要继承`CodingSupport`。   
+
 ```swift
 class UserInfo: CodingSupport {
     var username: String = "default" //用户名
@@ -45,6 +47,7 @@ class UserInfo: CodingSupport {
 ```
 
 ##### 更新用户信息
+
 ```swift 
 //更新用户名
 func updateUserInfoName(name: String) {
@@ -57,6 +60,7 @@ func updateUserInfoSex(sex: Bool) {
 ```
 
 ##### 获取用户信息
+
 ```swift 
 func getUserInfoName() -> String {
     return PieceStore.get(UserInfo.self, key: "username") as! String
