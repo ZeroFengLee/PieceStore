@@ -12,7 +12,7 @@ public class PieceStore: NSObject {
     
     private static let defaultUserName = "default"
     
-    public class func saveUserId(userId: String) {
+    public class func handleContext(userId: String) {
         NSUserDefaults.standardUserDefaults().setObject(userId, forKey: "user_id")
         NSUserDefaults.standardUserDefaults().synchronize()
     }

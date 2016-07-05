@@ -1,6 +1,6 @@
 # PieceStore
 
-PieceStore是一个轻量级的`key-value`存储框架。
+PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用。
 
 
 # 前言
@@ -35,7 +35,7 @@ $ pod install
 
  假如项目有个需求，需要存储用户的信息，在没有网络的情况下也可以显示
  
- 1. 定一个UserInfo模型
+ ##### 定一个UserInfo模型
  > 注意: 存储的Model类一定要继承`CodingSupport`。
 ```swift
 class UserInfo: CodingSupport {
@@ -44,7 +44,7 @@ class UserInfo: CodingSupport {
 }
 ```
 
-2. 更新用户信息
+##### 更新用户信息
 ```swift 
 //更新用户名
 func updateUserInfoName(name: String) {
@@ -56,7 +56,7 @@ func updateUserInfoSex(sex: Bool) {
 }
 ```
 
-3. 获取用户信息
+##### 获取用户信息
 ```swift 
 func getUserInfoName() -> String {
     return PieceStore.get(UserInfo.self, key: "username") as! String
@@ -66,9 +66,9 @@ func getUserInfoName() -> String {
 ### 进阶用法
 
 我们上面已经存储量用户的相关信息，但是每个用户的信息是不一样的，App由｀User_A｀切换到了｀User_B｀账户，B账户肯定不需要A账户的存储信息，而且当｀User_B｀再切回｀User_A｀的时候，项目要保证A账户的信息还在。
-> 这个时候，你可以考虑使用PieceStore的分管理用户存储功能 `saveUserId` ， saveUserId方法可以在不同管理用户间快速切换，但是注意，同一时间只能存在一个管理用户。
+> 这个时候，你可以考虑使用PieceStore的分管理用户存储功能 `handleContext` ， handleContext方法可以在不同管理用户间快速切换，但是注意，同一时间只能存在一个管理用户。
 ```swift 
-func saveUserId(id: String) {
-    PieceStore.saveUserId(id)
+func handleContext(id: String) {
+    PieceStore.handleContext(id)
 }
 ```
