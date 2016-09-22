@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CodingSupport: NSObject, NSCoding {
+open class CodingSupport: NSObject, NSCoding {
     
     public func encode(with aCoder: NSCoder) {
         var count: UInt32 = 0
