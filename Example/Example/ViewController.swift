@@ -15,13 +15,13 @@ class ViewController: UIViewController {
         
         handleContext(id: "U002")
         
-        //Model属性单独更新
+        //Model属性单独更新/获取
         updateUserInfoName(name: "lifengxxx")
         let sName = getUserInfoName()
         print(sName)
         
         
-        //整个Model更新
+        //整个Model更新/获取
         let userInfo = UserInfo.userInfoMaker(name: "XXYY", gender: true)
         updateModelObj(obj: userInfo)
         let obj = getModelObj(type: UserInfo.self)

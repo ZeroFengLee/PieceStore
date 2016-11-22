@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import PieceStore
 
 //MARK: 切换用户
 func handleContext(id: String) {

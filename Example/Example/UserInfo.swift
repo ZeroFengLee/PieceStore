@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PieceStore
 
 class UserInfo: CodingSupport {
     var username: String = "default" //用户名

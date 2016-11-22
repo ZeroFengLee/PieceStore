@@ -22,7 +22,7 @@ PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用�
 ###Podfile[require: Swift3.0]
 在podfile中添加PieceStore依赖
 ```swift
-pod 'PieceStore', '~> 3.0.1'
+pod 'PieceStore', '~> 3.0.2'
 ```
 然后运行pod 更新
 ```swift
@@ -46,7 +46,22 @@ class UserInfo: CodingSupport {
 }
 ```
 
-##### 更新用户信息
+##### 更新整个用户信息
+
+```swift
+let userInfo = UserInfo()
+userInfo.username = "Zero"
+userInfo.userSex = true
+PieceStore.saveInfo(obj: userInfo)
+```
+
+##### 获取整个用户信息
+
+```swift
+let userInfo = PieceStore.getInfo(type: UserInfo.self)
+```
+
+##### 更新用户属性信息
 
 ```swift 
 //更新用户名
@@ -59,7 +74,7 @@ func updateUserInfoSex(sex: Bool) {
 }
 ```
 
-##### 获取用户信息
+##### 获取用户属性信息
 
 ```swift 
 func getUserInfoName() -> String {
