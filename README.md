@@ -49,16 +49,20 @@ class UserInfo: CodingSupport {
 ##### 更新整个用户信息
 
 ```swift
-let userInfo = UserInfo()
-userInfo.username = "Zero"
-userInfo.userSex = true
-PieceStore.saveInfo(obj: userInfo)
+func saveUserInfo() {
+    let userInfo = UserInfo()
+    userInfo.username = "Zero"
+    userInfo.userSex = true
+    PieceStore.saveInfo(obj: userInfo)
+}
 ```
 
 ##### 获取整个用户信息
 
 ```swift
-let userInfo = PieceStore.getInfo(type: UserInfo.self)
+func getUserInfo() {
+    let userInfo = PieceStore.getInfo(type: UserInfo.self)
+}
 ```
 
 ##### 更新用户属性信息
