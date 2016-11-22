@@ -3,7 +3,7 @@
 
 ![](logo.png)
 
-![](http://img.shields.io/badge/Swift-3-blue.svg)  ![Version](https://img.shields.io/cocoapods/v/CmdBluetooth.svg?style=flat)	![License](https://img.shields.io/cocoapods/l/CmdBluetooth.svg?style=flat)	![Platform](https://img.shields.io/cocoapods/p/CmdBluetooth.svg?style=flat)
+![](http://img.shields.io/badge/Swift-3-blue.svg)  ![Version](https://img.shields.io/cocoapods/v/PieceStore.svg?style=flat)	![License](https://img.shields.io/cocoapods/l/CmdBluetooth.svg?style=flat)	![Platform](https://img.shields.io/cocoapods/p/CmdBluetooth.svg?style=flat)
 
 PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用。
 
