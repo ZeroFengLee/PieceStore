@@ -24,7 +24,7 @@ PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用�
 
 # 安装
 
-###Podfile[require: Swift3.0]
+### Podfile[require: Swift3.0]
 在podfile中添加PieceStore依赖
 ```swift
 pod 'PieceStore', '~> 3.0.2'
@@ -36,7 +36,7 @@ $ pod install
 
 # 使用
 
-###基础用法
+### 基础用法
 
  假如项目有个需求，需要存储用户的信息，在没有网络的情况下也可以显示
  
