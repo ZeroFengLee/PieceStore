@@ -2,7 +2,7 @@
 
 
 ![](logo.png)
-
+![](https://travis-ci.org/ZeroFengLee/PieceStore.svg?branch=master)
 ![](http://img.shields.io/badge/Swift-4-orange.svg)
 ![Version](https://img.shields.io/cocoapods/v/PieceStore.svg?style=flat)	
 ![License](https://img.shields.io/cocoapods/l/CmdBluetooth.svg?style=flat)	
