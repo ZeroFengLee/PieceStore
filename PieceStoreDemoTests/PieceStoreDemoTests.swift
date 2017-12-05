@@ -46,7 +46,7 @@ class PieceStoreDemoTests: XCTestCase {
         PieceStore.save(obj: user2)
     }
     
-    func testGetSwiftUser() {
+    func testGetUser() {
         PieceStore.handleContext(userId: user1ContextId)
         let _user1 = PieceStore.get(type: User.self)
         XCTAssertEqual(_user1?.gender, user1.gender, "user's gender not equal")
