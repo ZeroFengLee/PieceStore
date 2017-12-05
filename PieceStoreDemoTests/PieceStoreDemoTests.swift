@@ -23,9 +23,6 @@ class PieceStoreDemoTests: XCTestCase {
     let user2 = User()
     let user2ContextId = "user2 context id"
     
-    let swift3User1 = UserSwift3()
-    let swift3UserContextId = "swift3 user1 context id"
-    
     override func setUp() {
         super.setUp()
         user1.gender = false
