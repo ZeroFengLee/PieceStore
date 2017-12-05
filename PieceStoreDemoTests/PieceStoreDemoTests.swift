@@ -9,28 +9,62 @@
 import XCTest
 @testable import PieceStoreDemo
 
+// @availiable Swift4
+class User: Codable {
+    var name = "default name"
+    var gender = true
+}
+
 class PieceStoreDemoTests: XCTestCase {
+    
+    let user1 = User()
+    let user1ContextId = "user1 context id"
+    
+    let user2 = User()
+    let user2ContextId = "user2 context id"
+    
+    let swift3User1 = UserSwift3()
+    let swift3UserContextId = "swift3 user1 context id"
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        user1.gender = false
+        user1.name = "user1.name"
+        
+        user2.gender = true
+        user2.name = "user2.name"
+        
+        swift3User1.gender = true
+        swift3User1.name = "siwft3.user1.name"
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSaveAUser() {
+        PieceStore.handleContext(userId: user1ContextId)
+        PieceStore.save(obj: user1)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testExchangeContext() {
+        PieceStore.handleContext(userId: user2ContextId)
+        PieceStore.save(obj: user2)
     }
     
+    func testGetSwiftUser() {
+        PieceStore.handleContext(userId: user1ContextId)
+        let _user1 = PieceStore.get(type: User.self)
+        XCTAssertEqual(_user1?.gender, user1.gender, "user's gender not equal")
+        XCTAssertEqual(_user1?.name, user1.name, "user' name not equal")
+    }
+    
+    func testGetNewContextUser() {
+        PieceStore.handleContext(userId: user2ContextId)
+        let _user2 = PieceStore.get(type: User.self)
+        XCTAssertEqual(_user2?.gender, user2.gender, "user's gender not equal")
+        XCTAssertEqual(_user2?.name, user2.name, "user' name not equal")
+    }
 }
+
+

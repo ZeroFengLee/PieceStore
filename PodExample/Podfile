@@ -4,7 +4,8 @@ platform :ios,  '8.0'
 use_frameworks!
 
 def pro_pods
-    pod 'PieceStore', '~> 3.0.2'
+	pod 'PieceStore', '~> 4.0.1'
+    #pod 'PieceStore', '~> 3.0.2'
 end
 
 target 'Example' do
