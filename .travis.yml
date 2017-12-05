@@ -1,0 +1,13 @@
+language: objective-c
+
+branches:
+  only:
+    - master
+
+xcode_project: PieceStoreDemo.xcodeproj
+xcode_scheme: PieceStoreDemoTests
+osx_image: xcode9
+xcode_sdk: iphonesimulator10.0
+
+script:
+  - xcodebuild test -project PieceStoreDemo.xcodeproj -scheme "PieceStoreDemo" -destination "platform=iOS Simulator,name=iPhone 6s"

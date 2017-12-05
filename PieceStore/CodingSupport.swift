@@ -15,7 +15,7 @@ open class CodingSupport: NSObject, NSCoding {
         let ivars = class_copyIvarList(self.classForCoder, &count)
         for i in 0..<Int(count) {
             let ivar = ivars?[i]
-            let key = NSString(cString: ivar_getName(ivar), encoding: String.Encoding.utf8.rawValue) as! String
+            let key = NSString(cString: ivar_getName(ivar!)!, encoding: String.Encoding.utf8.rawValue)! as String
             let value = self.value(forKey: key)
             aCoder.encode(value, forKey: key)
         }
@@ -28,7 +28,7 @@ open class CodingSupport: NSObject, NSCoding {
         let ivars = class_copyIvarList(self.classForCoder, &count)
         for i in 0..<Int(count) {
             let ivar = ivars?[i]
-            let key = NSString(cString: ivar_getName(ivar), encoding: String.Encoding.utf8.rawValue) as! String
+            let key = NSString(cString: ivar_getName(ivar!)!, encoding: String.Encoding.utf8.rawValue)! as String
             let value = aDecoder.decodeObject(forKey: key)
             self.setValue(value, forKey: key)
         }
