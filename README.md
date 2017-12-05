@@ -3,7 +3,7 @@
 
 ![](logo.png)
 
-![](http://img.shields.io/badge/Swift-4-orange.svg)  
+![](http://img.shields.io/badge/Swift-4-orange.svg)
 ![Version](https://img.shields.io/cocoapods/v/PieceStore.svg?style=flat)	
 ![License](https://img.shields.io/cocoapods/l/CmdBluetooth.svg?style=flat)	
 ![Platform](https://img.shields.io/cocoapods/p/CmdBluetooth.svg?style=flat)
@@ -27,16 +27,12 @@ PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用�
 
 # 安装
 
-### Podfile[require: Swift3.0]
-> 已支持Swift4, Swift3需要继承CodingSupport基类，Swift4需要符合Codable协议(其实不需要实现任何接口)
+### Podfile
+> Swift3需要继承CodingSupport基类，Swift4需要支持Codable协议(其实不需要实现任何接口)
 
 在podfile中添加PieceStore依赖
 ```swift
-pod 'PieceStore', '~> 4.0.0'
-```
-然后运行pod 更新
-```swift
-$ pod install
+pod 'PieceStore', '~> 4.0.1'
 ```
 
 # 使用
