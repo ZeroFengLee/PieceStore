@@ -30,9 +30,6 @@ class PieceStoreDemoTests: XCTestCase {
         
         user2.gender = true
         user2.name = "user2.name"
-        
-        swift3User1.gender = true
-        swift3User1.name = "siwft3.user1.name"
     }
     
     override func tearDown() {
