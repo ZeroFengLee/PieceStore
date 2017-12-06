@@ -1,7 +1,5 @@
 # PieceStore
 
-
-![](logo.png)
 ![](https://travis-ci.org/ZeroFengLee/PieceStore.svg?branch=master)
 ![](http://img.shields.io/badge/Swift-4-orange.svg)
 ![Version](https://img.shields.io/cocoapods/v/PieceStore.svg?style=flat)	
@@ -20,12 +18,12 @@
 
 > Set
 
-UserDefaults.standard.set("myName", forKey: "name")
+UserDefaults.standard.set("myName", forKey: "name")  
 UserDefaults.standard.set(0, forKey: "age")
 
 > Get
 
-UserDefaults.standard.string(forKey: "name")
+UserDefaults.standard.string(forKey: "name")  
 UserDefaults.standard.integer(forKey: "age")
 
 # Good Way
