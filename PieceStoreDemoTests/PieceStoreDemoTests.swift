@@ -48,6 +48,7 @@ class PieceStoreDemoTests: XCTestCase {
     
     func testGetUser() {
         PieceStore.handleContext(userId: user1ContextId)
+        PieceStore.save(obj: user1)
         let _user1 = PieceStore.get(type: User.self)
         XCTAssertEqual(_user1?.gender, user1.gender, "user's gender not equal")
         XCTAssertEqual(_user1?.name, user1.name, "user' name not equal")
@@ -55,6 +56,7 @@ class PieceStoreDemoTests: XCTestCase {
     
     func testGetNewContextUser() {
         PieceStore.handleContext(userId: user2ContextId)
+        PieceStore.save(obj: user2)
         let _user2 = PieceStore.get(type: User.self)
         XCTAssertEqual(_user2?.gender, user2.gender, "user's gender not equal")
         XCTAssertEqual(_user2?.name, user2.name, "user' name not equal")
