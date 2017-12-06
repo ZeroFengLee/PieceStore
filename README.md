@@ -71,7 +71,6 @@ PieceStore.save(obj: user01)
 PieceStore.handleContext(userId: "user2.id")
 let user02 = User(name: "user2's name", age: 18)
 PieceStore.save(obj: user02)
-let user2 = PieceStore.get(type: User.self)
 ```
 
 > Get
