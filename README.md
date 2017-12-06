@@ -8,32 +8,93 @@
 ![License](https://img.shields.io/cocoapods/l/CmdBluetooth.svg?style=flat)	
 ![Platform](https://img.shields.io/cocoapods/p/CmdBluetooth.svg?style=flat)
 
-PieceStore是一个轻量级的对象存储框架，以`key-value`方式使用。
+✨PieceStore conveniently used to handle the save model
 
+# Advantage
 
-# 前言
+- Simple & Code readable
+- Switch context
+- Support multiple users 
 
-最近在做一个运动健康方面的项目，在项目中有很多使用NSUserDefalut存储的工作，比如存储用户的userId, user_name以及一些基本的配置信息。之前我们可能简单的使用NSUserDefalut对单个属性进行存储，这会导致代码管理压力。所以PieceStore就是为了解决这种问题而存在的一个小型的框架。
+# Bad Way
 
-# 适用于
+> Set
 
-假如你的项目当中有很多的零散信息需要持久化,数据量少，但是分散。还不至于使用数据库这种庞大的存储框架的时候，PieceStore也许非常适合你
+UserDefaults.standard.set(0, forKey: "userId")
+UserDefaults.standard.set("myName", forKey: "name")
+UserDefaults.standard.set(0, forKey: "age")
 
-# 特性
+> Get
 
-- 持久化支持多用户
-- 对象之间的归档互不影响
-- 存储操作简单，再也不需要去编写序列化/反序列化的机械操作
+UserDefaults.standard.integer(forKey: "userId")
+UserDefaults.standard.string(forKey: "name")
+UserDefaults.standard.integer(forKey: "age")
 
-# 安装
+# Good Way
 
-### Podfile
-> Swift3需要继承CodingSupport基类，Swift4需要支持Codable协议(其实不需要实现任何接口)
+```swift
+class User: Codable {
+    var name = "default name"
+    var age = 12
+    
+    init(userId: Int, name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+```
 
-在podfile中添加PieceStore依赖
+> Set
+
+```swift
+var user = User(name: "myName", age: 12)
+PieceStore.save(obj: user)
+```
+
+> Get
+
+```swift
+let user = PieceStore.get(type: User.self)
+```
+
+## Switch context
+
+```swift
+PieceStore.handleContext(userId: "user1.id")
+```
+
+## Multiple users
+
+> Set
+
+```swfit
+PieceStore.handleContext(userId: "user1.id")
+let user01 = User(name: "user1's name", age: 12)
+PieceStore.save(obj: user01)
+
+PieceStore.handleContext(userId: "user2.id")
+let user02 = User(name: "user2's name", age: 18)
+PieceStore.save(obj: user02)
+let user2 = PieceStore.get(type: User.self)
+```
+
+> Get
+
+```swift
+PieceStore.handleContext(userId: "user1.id")
+let user1 = PieceStore.get(type: User.self)
+
+PieceStore.handleContext(userId: "user2.id") // name == "user1's name"
+let user2 = PieceStore.get(type: User.self) // name == "user2's name"
+```
+
+# Installation
+
 ```swift
 pod 'PieceStore', '~> 4.0.1'
 ```
+
+> Swift3需要继承CodingSupport基类，Swift4需要支持Codable协议(其实不需要实现任何接口)
 
 # 使用
 
