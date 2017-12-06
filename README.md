@@ -47,7 +47,7 @@ let user = PieceStore.get(type: User.self)
 
 # Use - Swift3
 
- > > Inherited base class `CodingSupport`   
+ > Inherited base class `CodingSupport`   
 
 ```swift
 class User: CodingSupport {
