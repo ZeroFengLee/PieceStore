@@ -20,13 +20,11 @@
 
 > Set
 
-UserDefaults.standard.set(0, forKey: "userId")
 UserDefaults.standard.set("myName", forKey: "name")
 UserDefaults.standard.set(0, forKey: "age")
 
 > Get
 
-UserDefaults.standard.integer(forKey: "userId")
 UserDefaults.standard.string(forKey: "name")
 UserDefaults.standard.integer(forKey: "age")
 
