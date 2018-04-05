@@ -11,7 +11,11 @@
 # Installation
 
 ```swift
+> Swift4
 pod 'PieceStore', '~> 4.0.1'
+
+> Swift3
+pod 'PieceStore', '~> 3.x'
 ```
 
 # Use - Swift4
